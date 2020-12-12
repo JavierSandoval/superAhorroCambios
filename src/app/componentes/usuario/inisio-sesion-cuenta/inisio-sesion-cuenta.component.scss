@@ -1,0 +1,64 @@
+.fondo{
+    background-image: url(../../../../assets/img/fondo.jpg);background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2% 0%;
+}
+
+/* CONTENEDOR */
+.contenedor {
+    top: 80px;
+    width: 500px;
+    margin: auto;
+    background-color: #65d938;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+/* IMAGEN */
+.imagen {
+    width: 400px;
+    height: 120px;
+    
+}
+.H1{
+    color: rgb(255, 255, 255);
+}
+
+/* TITULO */
+.titulo {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    font-size: large;
+}
+.terminos{
+    color: white;
+}
+
+/* BOTON REGISTRAR */
+.botonRegistrar {
+    background-color: #ffffff;
+    color: #1A86A1;
+}
+
+.botonRegistrar:hover {
+    background-color: #f85a59;
+    color: #FFFFFF;
+}
+
+/* BOTON CANCELAR */
+.botonCancelar {
+    background-color: #ff5700;
+    color: #FFFFFF;
+}
+.botonCancelar:hover{
+    background-color: #FFFFFF;
+    color: #972222;
+}
+
+option{
+    font-size: 15px;
+}
+
+.custom-select-lg{
+    font-size: 15px !important;
+}

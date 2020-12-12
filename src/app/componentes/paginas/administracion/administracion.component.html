@@ -1,0 +1,17 @@
+<div class="d-flex justify-content-center my-3">
+  <div class="btn-group" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-secondary" (click) = "cambiar('cliente')" >Cliente</button>
+  <button type="button" class="btn btn-secondary" (click) = "cambiar('producto')">Producto</button>
+  <button type="button" class="btn btn-secondary" (click) = "cambiar('factura')">Factura</button>
+  <button type="button" class="btn btn-secondary" (click) = "cambiar('usuario')">Usuario</button>
+ </div>
+</div>
+
+<section class="container" [ngSwitch]="role">
+
+  <app-lista-cliente *ngSwitchCase = "'cliente'"></app-lista-cliente>
+  <app-lista-usuario *ngSwitchCase = "'usuario'"></app-lista-usuario>
+  <app-lista-producto *ngSwitchCase = "'producto'"></app-lista-producto>
+  <app-lista-factura *ngSwitchCase = "'factura'"></app-lista-factura>
+
+</section>

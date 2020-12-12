@@ -1,0 +1,65 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light p-2" style="background-color: #68D93C;">
+      <a class="navbar-brand d-flex justify-content-center" routerLink="/inicio">
+        <img src="../assets/img/Logo.png" width="105px" height="90px" class="d-inline-block align-top mx-3" alt=""
+          loading="lazy">
+      </a>
+      <div class="navbar-nav w-100 justify-content-end">
+        <a *ngIf="token" class="nav-link mx-3" routerLink="/historial">
+          <img src="../assets/img/001-historia.svg" width="60px" height="60px" aclass="align-top" alt=".">
+          <p class="font-weight-bold m-0">Historial</p>
+        </a>
+        <a *ngIf="token" class="nav-link mx-3" routerLink="/carrito">
+          <img src="../assets/img/003-carrito-de-compras.svg" width="60px" height="60px" aclass="align-top" alt=".">
+          <p class="font-weight-bold m-0 pl-1">Carrito</p>
+        </a>
+        
+<!--*ngIf="role === 'Administrador'"-->
+
+        <a class="nav-link mx-3"  routerLink="/administracion" >
+          <img src="../assets/img/004-usuario.svg" width="60px" height="60px" aclass="align-top" alt=".">
+          <p class="font-weight-bold m-0 pl-1">Admi</p>
+        </a>
+
+        <div class="dropleft mx-3 ">
+          <a class="btn  dropleft-toggle" role="button" id="dropdownMenuLink"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img src="../assets/img/004-usuario.svg" width="60px" height="60px" aclass="align-top" alt=".">
+              <p class="font-weight-bold m-0" style="opacity: 60%;">Cuenta</p>
+          </a>
+
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a *ngIf="token === null" class="dropdown-item" routerLink="/iniciarSesion">Iniciar Sesion</a>
+              <a *ngIf="token === null" class="dropdown-item" routerLink="/registro">Registrarse</a>
+              <a class="dropdown-item" routerLink="/actualizarDatos">Actualizar Datos</a>
+              <a class="dropdown-item" (click)="cerrarSesion()">Cerrar Sesion</a>
+          </div>
+      </div>
+      </div>
+    </nav>
+
+    <div class="form-inline bg-dark">
+      <div class="col-md-8">
+        <form class="my-2 my-lg-0">
+          <input class="form-control mr-2 my-2" type="search" placeholder="¿Qué estás buscando? " aria-label="Search"
+            style="width: 90%;">
+          <img src="../assets/img/Raster.png" width="30px" height="30px" aclass="align-top" alt="">
+        </form>
+      </div>
+
+      <div class="col-md-4 d-flex justify-content-end">
+        <button class="categoria btn btn-light dropdown-toggle px-5" type="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">Categoria</button>
+        <div class="barra form-group d-flex justify-content-end">
+          <div class="categoria dropdown-menu">
+            <a class="dropdown-item" routerLink="/categorias/Pan y Pasteleria">Pan y pasteleria</a>
+            <a class="dropdown-item" routerLink="/categorias/Carnes">Carnes</a>
+            <a class="dropdown-item" routerLink="/categorias/Bebidas">Bebidas</a>
+            <a class="dropdown-item" routerLink="/categorias/Frutas y verduras">Frutas y verduras</a>
+            <a class="dropdown-item" routerLink="/categorias/Despensa">Despensa</a>
+            <a class="dropdown-item" routerLink="/categorias/Congelados">Congelados</a>
+          </div>
+        </div>
+      </div>
+    </div>
+</header>

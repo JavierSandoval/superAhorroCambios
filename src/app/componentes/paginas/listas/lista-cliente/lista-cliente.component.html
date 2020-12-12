@@ -1,0 +1,27 @@
+<div class="m-2">
+    <h2 class="text-center">Cliente</h2>
+    <table class="table">
+      <thead class=" text-light bg-danger">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre Completo</th>
+          <th scope="col">Usuario</th>
+          <th scope="col">Telefono</th>
+          <th scope="col"># de documento</th>
+          <th scope="col">Eliminar</th>
+          <th scope="col">Actualizar</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let cliente of clientes; index as indice">
+        <tr>
+          <th scope="row">{{indice+1}}</th>
+          <td>{{cliente.nombre}} {{cliente.apellido}}</td>
+          <td>{{cliente.usuario}}</td>
+          <td>{{cliente.telefono}}</td>
+          <td>{{cliente.numDoc}}</td>
+          <td><button type="button" class="btn btn-danger btn-sm py-0 px-3">Eliminiar</button></td>
+          <td><button type="button" class="btn btn-warning btn-sm py-0 px-3">Actualizar</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

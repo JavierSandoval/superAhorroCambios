@@ -1,0 +1,42 @@
+<div class="fondo">
+    <div class="contenedor my-2">
+      <div class="form-row">
+        <div class="form-group col-md-12 text-center">
+          <img src="../../../../assets/img/usuario.png" class="imagen" />
+          <h1 class="H1">Inisiar Sesion</h1>
+        </div>
+      </div>
+      <!--datos de registro-->
+      <form class="needs-validation" [formGroup]="formularioInisioDeSesion" (ngSubmit)="inisiarSesion()">
+  
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="usuario" class="titulo">Usuario:</label>
+            <input 
+            type="text" 
+            id="usuario" 
+            class='form-control '
+            placeholder="Ingresa tu usuario" 
+            maxlength="100"
+            formControlName="usuario" 
+            required />
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label class="titulo" for="contraseña">Contraseña:</label>
+            <input type="password" id="contraseña" class='form-control ' placeholder="Ingresa tu contraseña" minlength="6"
+              formControlName="contrasena" required />
+          </div>
+        </div>
+  
+        <!--botones registrar y cancelar-->
+  
+        <div class="d-flex justify-content-center border-top pt-3">
+        <button routerLink="/iniciarSesion" class="btn btn-danger rounded-pill px-5 m-2 font-weight-bold">Cancelar</button>
+        <button type="submit" class="btn btn-warning text-light rounded-pill px-5 m-2 font-weight-bold">Iniciar Sesion</button>
+        </div>
+  
+      </form>
+  
+    </div>
+  </div>

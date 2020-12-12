@@ -1,0 +1,75 @@
+<div class="fondo">
+  <div class="contenedor my-2">
+    <div class="form-row">
+      <div class="form-group col-md-12 text-center">
+        <img src="../../../../assets/img/usuario.png" class="imagen" />
+        <h1 class="H1">Registrate</h1>
+      </div>
+    </div>
+    <!--datos de registro-->
+    <form class="needs-validation" [formGroup]="formularioDeRegistro" (ngSubmit)="registrarUsuario()">
+
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="nombre" class="titulo">Nombre:</label>
+          <input type="text" id="nombre" [class]="'form-control ' + (formularioDeRegistro.controls.nombre.errors ? 'border-danger' : 'border-success')" placeholder="Ingresa tu nombre" maxlength="100"
+            formControlName="nombre" required />
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="titulo" for="apellido">Apellido:</label>
+          <input type="text" id="apellido" [class]="'form-control ' + (formularioDeRegistro.controls.apellido.errors ? 'border-danger' : 'border-success')" placeholder="Ingresa tu apellido" maxlength="100"
+            formControlName="apellido" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label class="titulo" for="usuario">Usuario:</label>
+          <input type="text" [class]="'form-control ' + (formularioDeRegistro.controls.usuario.errors ? 'border-danger' : 'border-success')" id="usuario" placeholder="Ingresa un usuario" maxlength="100"
+            formControlName="usuario" required />
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="titulo" for="contraseña">Contraseña:</label>
+          <input type="password" [class]="'form-control ' + (formularioDeRegistro.controls.contrasena.errors ? 'border-danger' : 'border-success')" id="contraseña" aria-describedby="passwordHelpBlock"
+            placeholder="Ingresa una contraseña" maxlength="100" formControlName="contrasena" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label class="titulo" for="numero">Numero de telefono:</label>
+          <input type="text" [class]="'form-control ' + (formularioDeRegistro.controls.telefono.errors ? 'border-danger' : 'border-success')" id="numero" placeholder="Ingresa tu numero" maxlength="100"
+            formControlName="telefono" required />
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="titulo" for="email">Correo electronico:</label>
+          <input type="text" [class]="'form-control ' + (formularioDeRegistro.controls.correo.errors ? 'border-danger' : 'border-success')" id="email" placeholder="Ingresa tu correo" maxlength="100"
+            formControlName="correo" required />
+        </div>
+      </div>
+
+      <h5 class="text-light">Documento:</h5>
+      <div class="form-row">
+        <div class="col">
+          <select formControlName="tipoDoc" [class]="'custom-select custom-select-lg mb-2 ' + (formularioDeRegistro.controls.tipoDoc.errors ? 'border-danger' : 'border-success')">
+            <option value="Cedula de ciudadania" >Cedula de ciudadania</option>
+            <option value="Pasaporte">Pasaporte</option>
+            <option value="Licencia">Licencia</option>
+          </select>
+        </div>
+        <div class="col">
+          <input type="text" [class]="'form-control ' + (formularioDeRegistro.controls.numDoc.errors ? 'border-danger' : 'border-success')" placeholder="Nº" maxlength="10" formControlName="numDoc" required />
+        </div>
+      </div>
+
+      <!--botones registrar y cancelar-->
+
+      <div class="d-flex justify-content-center border-top pt-3">
+      <button routerLink="/iniciarSesion" class="btn btn-danger rounded-pill px-5 m-2 font-weight-bold">Cancelar</button>
+      <button type="submit" class="btn btn-warning text-light rounded-pill px-5 m-2 font-weight-bold">Registrarse</button>
+      </div>
+
+    </form>
+
+  </div>
+</div>

@@ -1,0 +1,153 @@
+<div class="row ">
+    <div class="col ">
+      
+     <div class="container-sm col-12  ">
+
+       <h1 class="text-center text-warning ;">Finalizacion compra</h1>
+       <hr class="hrs row">
+       <h2 class=" text-left text-danger  ">Direccion de Envio</h2>
+  
+    <!--forulario-->
+    <div class="row bordes  " >
+      
+         <div class="col-8">
+          <form>
+          <div class="form-row">
+            <div class="col-md-6 mb-3">
+              <label for="validationServer01">Nombres</label>
+              <input type="text" class="form-control is-valid" id="validationServer01" value="" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="validationServer02">Apellidos</label>
+              <input type="text" class="form-control is-valid" id="validationServer02" value="" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-6 mb-3">
+              <label for="validationServer03">Dirección</label>
+              <input type="text" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+              <div id="validationServer03Feedback" class="invalid-feedback">
+                Ingrese una dirección valida
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationServer04">Localidad</label>
+              <select class="custom-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+                <option selected disabled value="">Choose...</option>
+                <option>...</option>
+              </select>
+              <div id="validationServer04Feedback" class="invalid-feedback">
+                Seleccione una localidad
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationServer05">Barrio</label>
+              <input type="text" class="form-control is-invalid" id="validationServer05" aria-describedby="validationServer05Feedback" required>
+              <div id="validationServer05Feedback" class="invalid-feedback">
+                
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
+              <label class="form-check-label" for="invalidCheck3">
+                Acepto terminos y condiciones
+              </label>
+              <div  id="invalidCheck3Feedback" class="invalid-feedback">
+                Debes estar de acuerdo antes de enviar.
+              </div>
+            </div>
+          </div>
+          
+          </form>
+         </div>
+       <div class="col-4 tema">
+       </div>
+
+      </div>
+   
+    <!--recoger en tienda o añadir direccion-->
+    <div class="row bordes" id="botonesRecogerAñadir">
+        <div class="col-sm-5 col-md-6  ">
+          <button type="button" class="btn btn-success btn-lg btn-block botones">Añadir Direccion</button>
+        </div>
+        <div class="col-sm-5 col-md-6   ">
+          <button type="button" class="btn btn-success btn-lg btn-block botones">Recoger en Tienda</button>
+        </div>
+
+    </div><br>
+    <h3 class=" text-left text-danger  ">Medio de Pago</h3>
+    <!--Metoo de pago-->
+    <div class="row bordes">
+      <div class="col-sm-5 col-md-6  ">
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="customCheck1">
+          <label class="custom-control-label" for="customCheck1">Tarjeta de credito</label>
+        </div>
+    <form action="#" class="credit-card-div">
+      <div class="panel panel-default" >
+       <div class="panel-heading">
+           
+            <div class="row ">
+                    <div class="col-md-12">
+                        <input type="text" class="form-control" placeholder="Enter Card Number" />
+                    </div>
+                </div>
+           <div class="row ">
+                    <div class="col-md-3 col-sm-3 col-xs-3">
+                        <span class="help-block text-muted small-font" > Expiry Month</span>
+                        <input type="text" class="form-control" placeholder="MM" />
+                    </div>
+               <div class="col-md-3 col-sm-3 col-xs-3">
+                        <span class="help-block text-muted small-font" >  Expiry Year</span>
+                        <input type="text" class="form-control" placeholder="YY" />
+                    </div>
+              <div class="col-md-3 col-sm-3 col-xs-3">
+                        <span class="help-block text-muted small-font" >  CCV</span>
+                        <input type="text" class="form-control" placeholder="CCV" />
+                    </div>
+               <div class="col-md-3 col-sm-3 col-xs-3">
+      <img src="../../../assets/img/card.jpg" class="img-rounded card" />
+               </div>
+                </div>
+           <div class="row ">
+                    <div class="col-md-12 pad-adjust">
+      
+                        <input type="text" class="form-control" placeholder="Name On The Card" />
+                    </div>
+                </div>
+           <div class="row">
+      <div class="col-md-12 pad-adjust">
+          <div class="checkbox">
+          <label>
+            <input type="checkbox" checked class="text-muted"> Save details for fast payments <a href="#"> learn how ?</a>
+          </label>
+        </div>
+      </div>
+           </div>
+             <div class="row ">
+                  <div class="col-md-6 col-sm-6 col-xs-6 pad-adjust">
+                       <input type="submit"  class="btn btn-danger" value="CANCEL" />
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-6 pad-adjust">
+                        <input type="submit"  class="btn btn-warning btn-block" value="PAY NOW" /><br>
+                    </div>
+            </div>
+           
+        </div>
+        </div>
+    </form>
+      
+    </div>
+    </div>
+       </div>
+    </div>
+  </div>
+

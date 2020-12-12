@@ -1,0 +1,133 @@
+.SeccionPromo {
+  width: 100%;
+  border-color: #77d353;
+  border-style: solid;
+}
+
+.contenedorPromo {
+  width: 80%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+}
+
+div form input {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.barra label {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  color: #ff9052;
+  font-size: 46px;
+}
+
+.titulo {
+  border-color: #58933d;
+  border-style: none none solid none;
+}
+
+.tabla {
+  height: 380px;
+}
+
+thead {
+  background-color: #68d93c;
+}
+
+h3 {
+  font-size: 22px;
+  font-family: Domine;
+  color: #5a6978;
+}
+
+.caja label {
+  font-size: 16px !important;
+  color: #5a6978;
+}
+
+.formulario {
+  height: auto;
+}
+
+.caja {
+  height: 30px;
+}
+
+.caja2 {
+  height: 30px;
+}
+
+.caja input {
+  font-size: 14px !important;
+  color: #5a6978 !important;
+}
+
+.caja2 input {
+  font-size: 18px !important;
+  color: #f95f62 !important;
+}
+
+.caja2 label {
+  font-size: 18px !important;
+  color: #f95f62;
+}
+
+.imagenpro img {
+  height: 380px;
+}
+
+.cajapro img {
+  height: 100%;
+}
+
+.cate img {
+  height: 100px;
+  width: 100px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cate1 p {
+  color: #f95f62;
+}
+
+.cate2 p {
+  color: #31a1fc;
+}
+
+.cate3 p {
+  color: #514ee2;
+}
+
+.cate4 p {
+  color: #f95fdf;
+}
+
+.cate5 p {
+  color: #550b91;
+}
+
+.cate6 p {
+  color: #f9975f;
+}
+
+.lista {
+  width: 100px;
+  height: 100px;
+}
