@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router'
 import { ProductoService } from '../../../servicios/producto.service'
 import { Producto } from '../../../interfaces/producto'
+import { CarritoService } from '../../../servicios/carrito.service';
 
 @Component({
   selector: 'app-categorias',
@@ -14,6 +15,7 @@ export class CategoriasComponent implements OnInit {
   categoria: any;
   listaCategoria: Producto [] = []
   productoZoom: Producto = {
+    _id: '',
     nombre: '',
     marca: '', 
     precio: 0,
@@ -24,7 +26,8 @@ export class CategoriasComponent implements OnInit {
 
   constructor(
     private rutaActiva: ActivatedRoute,
-    private _productoService: ProductoService
+    private _productoService: ProductoService,
+    private _carritoService: CarritoService
   ) { }
 
   ngOnInit(): void {
@@ -51,6 +54,10 @@ export class CategoriasComponent implements OnInit {
 
   onClickZoom(productoSeleccionado: Producto){
     this.productoZoom = productoSeleccionado
+  }
+
+  agregarCarrito(producto: Producto){
+    this._carritoService.cambioEnCarrito(producto);
   }
 
 }

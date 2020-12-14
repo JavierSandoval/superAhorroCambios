@@ -1,8 +1,9 @@
 export interface Producto {
-    nombre: String,
-    marca: String,
-    precio: Number,
-    categoria: String,
-    cantInventario: Number,
-    urlImg: String
+    _id: string,
+    nombre: string,
+    marca: string,
+    precio: number,
+    categoria: string,
+    cantInventario: number,
+    urlImg: string
 }

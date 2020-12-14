@@ -21,58 +21,25 @@
               <h4>Subtotal</h4>
             </div>
           </div>
-          <div class="row mt-2">
+          <div class="row mt-2" *ngFor="let item of productosCarrito">
             <div class="col-4 form-inline">
-              <img src="../../../../assets/img/uvas.jpg" class="img-fluid" alt="Responsive image"  width="100px">
-              <p class="ml-3">
-                Uvas<br>
-                445gr <br>
-                Iland <br>
-              </p>
+              <img src="../../../../assets/img/sandia.jpg" class="img-thumbnail" alt="Responsive image"  width="100px">
+              <br>
+              {{item.producto.nombre}}
             </div>
             <div class="col-2 align-middle">
-              <h4>$11.859</h4>
+              <h4>$ {{item.producto.precio}} </h4>
             </div>
             <div class="col-2">
-              <select class="custom-select align-middle" id="inlineFormCustomSelectPref">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-              </select>
+              <div class="input-group">
+                <input type="number" class="form-control" placeholder="{{item.cantidad}}" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+              </div>
             </div>
             <div class="col-2 align-middle">
-              <h4>$11.850</h4>
+              <h4>$ {{item.subtotal}} </h4>
             </div>
             <div class="col-1 align-middle">
-              <button type="button" class="btn" data-dismiss="modal">
-                <img src="../../../../assets/img/removeCar2.png" alt="">
-              </button>
-            </div>
-          </div>
-          <div class="row mt-2">
-            <div class="col-4 form-inline">
-              <img src="../../../../assets/img/sandia.jpg" class="img-fluid" alt="Responsive image"  width="100px">
-              <p class="ml-3">
-                Sandia <br>
-                445gr <br>
-                Ilandia <br>
-              </p>
-            </div>
-            <div class="col-2 align-middle">
-              <h4>$11.859</h4>
-            </div>
-            <div class="col-2">
-              <select class="custom-select align-middle" id="inlineFormCustomSelectPref">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-              </select>
-            </div>
-            <div class="col-2 align-middle">
-              <h4>$11.850</h4>
-            </div>
-            <div class="col-1 align-middle">
-              <button type="button" class="btn" data-dismiss="modal">
+              <button type="button" class="btn" data-dismiss="modal" (click)="removerItem(item.producto)">
                 <img src="../../../../assets/img/removeCar2.png" alt="">
               </button>
             </div>
@@ -84,7 +51,7 @@
               <h3>TOTAL</h3>
             </div>
             <div class="col-12 mt-2">
-              <p class="h4 text-danger">$50.000</p>
+              <p class="h4 text-danger">$ {{precioTotal}} </p>
             </div>
             <div class="col-12 mt-2">
               <a class="btn btn-naranja btn-block" role="button">Finalizar Compra</a>
